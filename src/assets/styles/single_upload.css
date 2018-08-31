@@ -1,0 +1,175 @@
+.single-upload {
+    background: rgba(0, 0, 0,0.4);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.single-upload .single-upload-title {
+    background: #4c94bf;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 60px;
+    color: #ffffff;
+    line-height: 60px;
+    font-size: 35px;
+    text-align: center;
+}
+.single-upload .vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.single-upload .single-upload-show {
+    text-align: center;
+    background: url("../../../static/images/img_gridme.png") repeat top left;
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #2d8a22;
+    overflow: hidden;
+}
+.single-upload .overlay {
+    border: solid 2px #49b745;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 999;
+}
+.single-upload .overlay:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 40px;
+    top: -40px;
+    left: -2px;
+    border-left: dashed 2px #49b745;
+    border-right: dashed 2px #49b745;
+}
+.single-upload .overlay:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 40px;
+    bottom: -40px;
+    left: -2px;
+    border-left: dashed 2px #49b745;
+    border-right: dashed 2px #49b745;
+}
+.single-upload .overlay-outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.single-upload .overlay-outer:before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 40px;
+    top: -2px;
+    left: -40px;
+    border-top: dashed 2px #49b745;
+    border-bottom: dashed 2px #49b745;
+}
+.single-upload .overlay-outer:after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 40px;
+    bottom: -2px;
+    right: -40px;
+    border-top: dashed 2px #49b745;
+    border-bottom: dashed 2px #49b745;
+}
+.single-upload .activated-box {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: move;
+    margin: 0 auto;
+}
+.single-upload .resize-image {
+    display: block;
+    border: 2px dashed transparent;
+}
+.single-upload .activated-box:hover {
+    outline: 2px dashed rgba(8, 134, 20, 0.9);
+}
+.single-upload .resize-image:hover {
+    outline: 2px dashed rgba(8, 134, 20, 0.9);
+}
+.single-upload .resize-handle{
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #0a7a20;
+    z-index: 999;
+}
+.single-upload .resize-handle-nw{
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+.single-upload .resize-handle-ne{
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+.single-upload .resize-handle-sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+.single-upload  .resize-handle-se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+.single-upload .canvas-create {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 20px;
+    color: #ffffff;
+    cursor: cell;
+    background: #4c94bf;
+    transition: all .3s;
+}
+.single-upload .canvas-create:hover {
+    bottom: 22px;
+    box-shadow: 2px 4px 10px #000000;
+}
+.single-upload .close-page {
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    background: #4c94bf;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
